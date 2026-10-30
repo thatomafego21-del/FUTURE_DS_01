@@ -80,19 +80,17 @@ The Power BI dashboard (`Task1_dashboard/dashboard.pbix`) is designed to let use
 
 ```text
 .
+├── Task1_dashboard/
+│   └── dashboard.pbix
 ├── Task1_dataset/
 │   ├── Sample - Superstore.csv
 │   └── Superstores_cleaned.csv
 ├── Task1_notebook/
 │   └── Task_1.ipynb
-├── Task1_dashboard/
-│   └── dashboard.pbix
-├── Task1_dashboard_images/
-│    └── dashboard.png
 └── README.md
 ```
 
-## Skills Demonstrated
+## Skills
 
 - Data cleaning and quality checks
 - Exploratory data analysis
