@@ -1,31 +1,82 @@
-# Future Interns Data Analytics Projects
+# Superstore Sales Performance Analysis
 
-This repository contains three end-to-end data analysis projects completed as part of the Future Interns data analytics internship. The work covers data cleaning, exploratory analysis, KPI development, visualization, and dashboarding with Python and Power BI.
+**Author: Thato Mafego**
 
-## Projects
+## Project Overview
 
-### Task 1: Superstore Sales Performance
+For this project, I explored the Superstore sales dataset to understand how the business performed across time, products, categories, and regions. I used Python for data preparation and analysis, then built a Power BI dashboard to present the results in an interactive and easy-to-follow way.
 
-Analyzes order-level retail sales to understand revenue trends, product and category performance, profitability, and regional results. The notebook cleans the Superstore data, calculates business KPIs, and creates visualizations for monthly sales, leading products, categories, and regions. A Power BI dashboard is included.
+## Objectives
 
-**Tools:** Python, pandas, Matplotlib, Jupyter Notebook, Power BI  
-**Files:** `Task1_notebook/Task_1.ipynb`, `Task1_dataset/`, `Task1_dashboard/dashboard.pbix`
+- Track sales and profit over time.
+- Identify the products and categories generating the most sales.
+- Compare sales, profit, and order activity across regions.
+- Summarize performance with business-focused KPIs.
+- Present the analysis in a dashboard that users can explore.
 
-### Task 2: Telecom Customer Churn
+## Tools and Technologies
 
-Explores the Telco Customer Churn dataset to profile churn and retention, compare customer segments, and examine how tenure, services, and billing relate to churn. The notebook includes data preparation, summary metrics, and visual analysis.
+- **Python** for data preparation and analysis
+- **pandas** for data cleaning and aggregation
+- **Matplotlib** for charts in the notebook
+- **Jupyter Notebook** for documenting the analysis
+- **Microsoft Power BI** for the interactive dashboard
+- **CSV** for the source and prepared datasets
 
-**Tools:** Python, pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook  
-**Files:** `Task_2.ipynb`, `WA_Fn-UseC_-Telco-Customer-Churn.csv`
+## Dataset
 
-### Task 3: Bank Marketing Campaign Analysis
+The project uses the Sample Superstore dataset, which contains order-level information such as order and shipping dates, customer segment, geography, product category and sub-category, sales, quantity, discount, and profit.
 
-Analyzes the UCI Bank Marketing campaign data to measure subscription conversion and compare outcomes by contact channel, month, customer demographics, and previous campaign result. The notebook cleans the data and builds conversion summaries and charts.
+- Source file: `Task1_dataset/Sample - Superstore.csv`
+- Prepared file: `Task1_dataset/Superstores_cleaned.csv`
+- Records: 9,994 rows and 21 columns
+- Period covered: 2014–2017
 
-**Tools:** Python, pandas, NumPy, Matplotlib, Jupyter Notebook  
-**Files:** `Task_3.ipynb`, `bank-full.csv`
+## Data Preparation and Analysis
 
-## Repository structure
+I loaded the source CSV into pandas and reviewed its dimensions, data types, missing values, duplicates, and numeric fields. I converted the order and shipping dates to dates, checked basic data consistency, and saved the prepared data for analysis.
+
+I then grouped the data to examine monthly sales, product and category sales, and regional sales and profit. I also calculated summary KPIs, including total sales, total profit, profit margin, order count, average order value, and units sold.
+
+## Key Performance Indicators
+
+| KPI | Result |
+|---|---:|
+| Total sales | $2,297,200.86 |
+| Total profit | $286,397.02 |
+| Overall profit margin | 12.47% |
+| Orders | 5,009 |
+| Average sales per order | $458.61 |
+| Units sold | 37,873 |
+
+The source dataset is the US Sample Superstore data, so monetary values are shown in USD.
+
+## Dashboard Features and Analysis
+
+The Power BI dashboard (`Task1_dashboard/dashboard.pbix`) is designed to let users explore sales performance through the available report visuals and filters. It presents the analysis across key business views, including:
+
+- Sales and profit KPIs for a quick overview.
+- Sales trends over time.
+- Product and category performance.
+- Regional sales and profit comparisons.
+- Interactive filtering to explore selected parts of the data.
+
+## Key Findings
+
+- The dataset records more than $2.29 million in sales and about $286,397 in profit, with an overall profit margin of 12.47%.
+- Sales activity can be compared month by month across the 2014–2017 period to identify changes and seasonal patterns.
+- Product and category summaries highlight which parts of the range contribute most to revenue.
+- Regional comparisons show that revenue and profit should be reviewed together to understand the quality of performance, not sales volume alone.
+
+## Business Recommendations
+
+- Review monthly performance regularly and plan inventory and promotions around observed demand patterns.
+- Protect availability and visibility for high-revenue products, while checking their profit contribution before expanding discounts.
+- Compare regional profit margins as well as sales when setting regional targets and allocating resources.
+- Investigate low-profit or loss-making product and regional combinations to understand the effects of discounts, costs, and product mix.
+- Use the dashboard filters to investigate changes by date, product, category, and region before making decisions.
+
+## Project Structure
 
 ```text
 .
@@ -36,34 +87,16 @@ Analyzes the UCI Bank Marketing campaign data to measure subscription conversion
 │   └── Superstores_cleaned.csv
 ├── Task1_notebook/
 │   └── Task_1.ipynb
-├── Task_2.ipynb
-├── Task_3.ipynb
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── bank-full.csv
-├── Bank-Marketing_cleaned.csv
-└── Customer_Churn_clean.csv
+└── README.md
 ```
 
-## Getting started
+## Skills
 
-Open the notebooks in Jupyter Notebook or JupyterLab. The Task 1 notebook expects to be run from `Task1_notebook/` and reads `Sample - Superstore.csv` from `Task1_dataset/`; if needed, adjust its input path to `../Task1_dataset/Sample - Superstore.csv`. Tasks 2 and 3 read their source CSV files from the repository root, so run those notebooks with the repository root as the working directory.
-
-Install the commonly used Python packages with:
-
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
-```
-
-Open the Power BI dashboard in `Task1_dashboard/dashboard.pbix` with Microsoft Power BI Desktop.
-
-## Data and generated files
-
-The CSV files include source datasets and cleaned analysis outputs. The notebooks may overwrite cleaned CSV outputs when run. The Power BI dashboard is a separate project artifact.
-
-## Skills demonstrated
-
-- Data quality checks and cleaning
-- Exploratory data analysis and descriptive statistics
-- KPI and conversion-rate calculations
-- Trend, category, regional, and customer-segment analysis
-- Communicating findings with charts and an interactive Power BI dashboard
+- Data cleaning and quality checks
+- Exploratory data analysis
+- Date handling and grouping data by time period
+- KPI calculation and interpretation
+- Product, category, and regional performance analysis
+- Python data visualization
+- Power BI dashboard development
+- Communicating results and recommendations for business audiences
