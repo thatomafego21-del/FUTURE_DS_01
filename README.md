@@ -87,7 +87,6 @@ The Power BI dashboard (`Task1_dashboard/dashboard.pbix`) is designed to let use
 │   └── Task_1.ipynb
 ├── Task1_dashboard/
 │   └── dashboard.pbix
-├── Task1_dashboard_images/
 │    └── dashboard.png
 └── README.md
 ```
